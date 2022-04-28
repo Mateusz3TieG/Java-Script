@@ -1,24 +1,22 @@
 //losowanie liczby
-var wylosowanaliczba=Math.floor(Math.random()*100)+1;
+var wylosowanaLiczba=Math.floor(Math.random()*100)+1;
 //wyswietlanie liczby
 function wyborLiczby(){
     var ilosc=document.getElementById("zakres").value;
     document.getElementById("wybranaLiczba").value=ilosc;
-    wylosowanaliczba=Math.floor(Math.random()*ilosc)+1;
-    iloscprob=0
+    wylosowanaLiczba=Math.floor(Math.random()*ilosc)+1;
+    iloscProb=0;
 }
 //liczba prób
-var iloscprob=0
+var iloscProb=0
 function sprawdzLiczbe(){
-    iloscprob++;
+    iloscProb++;
     dane=document.getElementById('liczba')
-    if(dane.value==wylosowanaliczba){
-        alert("Wygrałeś. Ilość prób to: "+iloscprob)
-    }
-    else if(dane.value<wylosowanaliczba){
+    if(dane.value == wylosowanaLiczba){
+        alert("Wygrałeś. Ilość prób to "+iloscProb)
+    }else if(dane.value<wylosowanaLiczba){
         alert("Za mała liczba")
-    }
-    else{
+    }else{
         alert("Za duża liczba")
     }
 }
